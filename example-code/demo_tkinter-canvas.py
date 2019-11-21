@@ -16,8 +16,8 @@ def create_grid(event=None):
         canvas.create_line([(0, i), (width_of_canvas, i)], tag='grid_line')
 
 
-root = tkinter.Tk()
-canvas = tkinter.Canvas(root, height=646, width=646, bg='white')
+master = tkinter.Tk()
+canvas = tkinter.Canvas(master, height=646, width=646, bg='white')
 canvas.pack(fill=tkinter.BOTH, expand=True)
 canvas.bind('<Configure>', create_grid)
-root.mainloop()
+master.mainloop()
