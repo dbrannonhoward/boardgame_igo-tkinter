@@ -1,7 +1,5 @@
 from CONSTANTS.COLORS import *
 from CONSTANTS.DIMENSIONS import *
-from tkinter.ttk import Separator
-from tkinter.ttk import Style
 import tkinter as tk
 
 
@@ -12,11 +10,18 @@ class GameBoard:
         self.canvas.pack(fill=tk.BOTH, expand=True)
         self.canvas.bind('<Configure>', self.draw_board)
         self.calculate_square_size_for_game_space()
-        for i in range(1, 20):
-            self.draw_square_at(i, i)
 
     def calculate_square_size_for_game_space(self):
         self.square_size = int(TOP / SPACE_SIZE)  # BW/SP is equally valid
+
+    def assign_canvas_coordinates_to_discrete_game_tiles(self):
+        tile_dict = dict()
+        for tile in range(1, 10):
+            for x_canvas_pixel in (BOTTOM, TOP):
+                for y_canvas_pixel in (BOTTOM, TOP):
+                    x_lower_bound = tile * self.square_size
+                    if  < x_canvas_pixel <
+
 
     def draw_board(self, event=None):
         self.width = self.canvas.winfo_width()
