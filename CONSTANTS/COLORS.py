@@ -1,0 +1,1 @@
+SQUARE_COLOR = 'green'
