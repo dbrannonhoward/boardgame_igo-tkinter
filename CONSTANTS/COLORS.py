@@ -1,1 +1,1 @@
-SQUARE_COLOR = 'green'
+SHAPE_COLOR = 'blue'
